@@ -1,0 +1,16 @@
+.DesktopNavbar {
+  border: 1px solid black;
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    li {
+      list-style-type: none;
+      font-size: 1.8vw;
+      cursor: pointer;
+      &:hover {
+        color: #7b01f7;
+      }
+    }
+  }
+}

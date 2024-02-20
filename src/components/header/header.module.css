@@ -1,0 +1,28 @@
+.Header {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logoContainer {
+    width: 7vw;
+  }
+  .navbar {
+    .mobileNavbar {
+      display: none;
+    }
+  }
+}
+
+/* tablet */
+@media all and (max-width: 991px) {
+  .Header {
+    .navbar {
+      .desktopNavbar {
+        display: none;
+      }
+      .mobileNavbar {
+        display: block;
+      }
+    }
+  }
+}
