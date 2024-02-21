@@ -1,0 +1,69 @@
+.Hero {
+  border: 1px solid black;
+  /* height: 75vh; */
+  padding: 5vw 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 9vw;
+
+  .titleContainer {
+    border: 1px solid black;
+    margin-top: 5vw;
+    h1 {
+      span {
+        color: #aeaeae;
+      }
+    }
+  }
+
+  .videoContainer {
+    width: 100%;
+    border-radius: 3vw;
+    source {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .manualLogo {
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+    .swiperContainer {
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .navigationButton {
+        border: 2px solid #eee;
+        font-size: 3vw;
+        padding: 0.8vw 0.1vw;
+        border-radius: 2rem;
+        cursor: pointer;
+
+        &:hover {
+          border-color: #7b01f7;
+        }
+      }
+      .swiper {
+        border: 1px solid black;
+        width: 90%;
+        .swiperSlide {
+          border: 1px solid black;
+          .logoContainer {
+            border: 1px solid black;
+            width: 8vw;
+            padding: 1vw;
+            &:hover {
+              background-color: #eee;
+            }
+          }
+        }
+      }
+    }
+  }
+}

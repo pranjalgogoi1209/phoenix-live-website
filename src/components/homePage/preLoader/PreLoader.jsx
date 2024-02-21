@@ -8,7 +8,7 @@ export default function PreLoader() {
 
   setTimeout(() => {
     setIsPlay(false);
-  }, [5000]);
+  }, [4400]);
 
   return (
     <div className={styles.PreLoader}>
