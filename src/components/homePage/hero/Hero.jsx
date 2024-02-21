@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import styles from "./hero.module.css";
-import video from "./../../../assets/preLoader/animatedLogo.mp4";
+import video from "./../../../assets/home/hero/intro-video.mp4";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { logos } from "../../../data/home/hero";
@@ -75,7 +75,7 @@ export default function Hero() {
               },
             },
           }} */
-            spaceBetween={100}
+            spaceBetween={0}
             slidesPerView={5}
             className={styles.swiper}
           >
@@ -93,6 +93,8 @@ export default function Hero() {
             <MdKeyboardArrowRight />
           </button>
         </div>
+        {/* horizontal line */}
+        <hr />
       </div>
     </section>
   );

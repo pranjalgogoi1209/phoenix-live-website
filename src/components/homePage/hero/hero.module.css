@@ -34,7 +34,7 @@
     flex-direction: column;
     gap: 4vw;
     .swiperContainer {
-      border: 1px solid black;
+      /* border: 1px solid black; */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -50,14 +50,17 @@
         }
       }
       .swiper {
-        border: 1px solid black;
+        /* border: 1px solid black; */
         width: 90%;
         .swiperSlide {
-          border: 1px solid black;
+          /* border: 1px solid black; */
           .logoContainer {
-            border: 1px solid black;
-            width: 8vw;
-            padding: 1vw;
+            /* border: 1px solid black; */
+            width: 14vw;
+            /* height: 6vw; */
+            padding: 0.5vw 1vw;
+            cursor: pointer;
+            transition: background ease 0.3s;
             &:hover {
               background-color: #eee;
             }

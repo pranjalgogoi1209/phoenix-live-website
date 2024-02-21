@@ -1,0 +1,41 @@
+.WhatWeDo {
+  border: 1px solid black;
+  padding: 2vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .swiperContainer {
+    /* border: 1px solid black; */
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .swiperParent {
+      /* border: 1px solid black; */
+      width: 68%;
+      height: 100%;
+      /* margin-left: 10vw; */
+    }
+    .swiper {
+      height: 31vw;
+      border: 12px solid #eee;
+      border-radius: 2vw;
+      width: 100%;
+      .swiperSlide {
+        /* border: 1px solid black; */
+        padding: 5vw 2vw;
+        display: flex;
+        flex-direction: column;
+        gap: 4vw;
+        p {
+          font-size: 1.7vw;
+        }
+        .content {
+          display: flex;
+          flex-direction: column;
+          gap: 1vw;
+        }
+      }
+    }
+  }
+}
