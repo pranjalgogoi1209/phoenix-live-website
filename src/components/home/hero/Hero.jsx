@@ -24,15 +24,17 @@ export default function Hero() {
   return (
     <section className={styles.Hero}>
       {/* title */}
-      <div className={styles.titleContainer}>
-        <h1>
-          Just a sassy <br />{" "}
-          <span>
-            events <br /> agency
-          </span>
-        </h1>
+      <div className={styles.titleWrapper}>
+        <div className={styles.titleContainer}>
+          <h1>
+            Just a sassy <br />{" "}
+            <span>
+              events <br /> agency
+            </span>
+          </h1>
 
-        {/* <button>Book an Event</button> */}
+          {/* <button>Book an Event</button> */}
+        </div>
       </div>
 
       {/* video */}

@@ -1,0 +1,23 @@
+/* Pagination styles */
+.swiper-pagination {
+  position: absolute;
+  left: 6%;
+  bottom: 20%;
+  /* transform: translateX(-50%); */
+  display: flex;
+}
+
+.swiper-pagination-bullet {
+  width: 1.4vw;
+  height: 1.4vw;
+  background-color: #eee;
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #7b01f7;
+  width: 1.6vw;
+  height: 1.6vw;
+}

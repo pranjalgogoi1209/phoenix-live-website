@@ -12,8 +12,6 @@ export default function Services() {
         engagement at your events.
       </p>
       <div className={styles.slideWrapper}>
-        {/* <div className={styles.left}></div> */}
-
         <div className={styles.slideContainer}>
           {services?.map((item, index) => (
             <div className={styles.paraContainer} key={index}>
@@ -28,8 +26,6 @@ export default function Services() {
             </div>
           ))}
         </div>
-
-        {/* <div className={styles.right}></div> */}
       </div>
     </div>
   );

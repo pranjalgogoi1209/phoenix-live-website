@@ -2,7 +2,8 @@ import React, { useRef } from "react";
 import styles from "./whatWeDo.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import "swiper/css/pagination";
+// import "swiper/css/pagination";
+import "./pagination.css";
 
 export default function WhatWeDo() {
   const swiperRef = useRef();
@@ -77,6 +78,7 @@ export default function WhatWeDo() {
               </SwiperSlide>
             ))}
           </Swiper>
+          <div className="swiper-pagination"></div>
         </div>
       </div>
     </section>
