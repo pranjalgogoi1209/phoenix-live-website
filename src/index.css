@@ -9,13 +9,30 @@
 body {
   /* border: 1px solid red; */
   width: 100vw;
-  padding: 2vw 4vw;
+  color: #212121;
 }
 
 button {
   border: none;
   outline: none;
   background-color: transparent;
+  cursor: pointer;
+}
+
+.btn1 {
+  border-radius: 0.5vw;
+  padding: 0.3vw 1vw;
+
+  font-size: 1.5vw;
+  font-weight: 500;
+  transition: all ease 0.2s;
+  border: 0.2vw solid #212121;
+  color: #fff;
+  background-color: #212121;
+  &:hover {
+    background-color: #eee;
+    color: #212121;
+  }
 }
 
 img {

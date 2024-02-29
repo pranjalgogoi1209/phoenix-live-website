@@ -1,48 +1,35 @@
-import emerge from "./../../assets/home/portfolio/emerge.jpg";
-import microsoft from "./../../assets/home/portfolio/microsoft.png";
-import ridersMusic from "./../../assets/home/portfolio/ridersMusic.jpg";
+import microsoft from "./../../assets/projects/microsoft-e-d.png";
+import google from "./../../assets/projects/google-holiday-party-aftermovies.png";
+import visa from "./../../assets/projects/visa-annual-party.png";
+import explore from "./../../assets/projects/explore-more.jpg";
 
 export const portfolio = [
   {
-    title: "Asian Paints Maharaja Event",
+    title: "Microsoft E+D",
     img: microsoft,
     color: "yellow",
     bg: "#251e1c",
     class: "vertical",
   },
   {
-    title: "Microsoft E+D",
-    img: microsoft,
+    title: "Google Holiday Party",
+    img: google,
+    color: "orange",
+    bg: "#222935",
+    class: "horizontal",
+  },
+  {
+    title: "Visa Annual Party",
+    img: visa,
     color: "orange",
     bg: "#220c04",
     class: "horizontal",
   },
   {
-    title: "Life in Colour",
-    img: microsoft,
-    color: "green",
-    bg: "#341222",
-    class: "vertical",
-  },
-  {
-    title: "Riders Music Festival",
-    img: ridersMusic,
-    color: "white",
-    bg: "#05020d",
-    class: "horizontal",
-  },
-  {
-    title: "Emerge",
-    img: emerge,
+    title: "EXPLORE MORE",
+    img: explore,
     color: "purple",
     bg: "#222935",
     class: "vertical",
-  },
-  {
-    title: "Google Holiday Party Aftermovies",
-    img: microsoft,
-    color: "orange",
-    bg: "#222935",
-    class: "horizontal",
   },
 ];

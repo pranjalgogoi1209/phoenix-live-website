@@ -1,60 +1,77 @@
 .Footer {
+  margin-top: 15vw;
   border: 1px solid black;
-  text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 5vw;
-  padding: 4vw;
-  h1 {
-    color: #aeaeae;
-    line-height: 8.5vw;
-  }
-  .contact {
+  align-items: center;
+  gap: 2vw;
+  position: relative;
+  background-color: #212121;
+  padding: 2vw;
+  .footerOne {
+    border: 0.2vw solid #212121;
+    width: 80%;
+    padding: 3vw 2vw;
     display: flex;
-    justify-content: center;
-    gap: 2vw;
-    div {
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: -8vw;
+    left: 10%;
+    border-radius: 1vw;
+    background-image: url("./../../assets/footer/texture1.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 -0.1vw 0.8vw rgba(0, 0, 0, 0.5);
+    p {
+      font-size: 3vw;
+      font-weight: 600;
+    }
+    button {
+      font-size: 2vw;
+    }
+  }
+  .footerTwo {
+    margin-top: 10vw;
+    /* border: 1px solid white; */
+    color: #ccc;
+    display: flex;
+    justify-content: space-around;
+
+    .footerLogoContainer {
+      /* border: 1px solid white; */
+      width: 20%;
       padding: 2vw;
-      border-radius: 4vw;
-      border: 1px solid black;
-      width: 45%;
-      text-align: center;
-      p {
-        font-size: 2.7vw;
-        font-weight: 500;
-        cursor: pointer;
-        &:hover {
-          color: #7b01f7;
+      display: flex;
+      flex-direction: column;
+      gap: 1vw;
+      .footerLogo {
+        width: 10vw;
+      }
+    }
+    .explore {
+      /* border: 1px solid white; */
+      display: flex;
+      flex-direction: column;
+      gap: 1vw;
+      padding: 2vw;
+    }
+    .footerContact {
+      /* border: 1px solid white; */
+      padding: 2vw;
+      display: flex;
+      flex-direction: column;
+      gap: 1vw;
+      .socialMedia {
+        display: flex;
+        gap: 1.5vw;
+        svg {
+          font-size: 2vw;
         }
       }
     }
   }
-  .socialMedia {
-    display: flex;
-    justify-content: center;
-    gap: 2vw;
-    padding: 5vw;
-    border-top: 1px solid rgba(0, 0, 0, 0.2);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    div {
-      padding: 0.7vw 1.2vw;
-      border-radius: 4vw;
-      background-color: #eee;
-      text-align: center;
-      p {
-        font-size: 2vw;
-        font-weight: 400;
-        cursor: pointer;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-  .copyRight {
-    /* border: 1px solid black; */
-    padding: 2vw;
-    font-size: 1.7vw;
-    font-weight: 400;
+  .footerThree {
+    color: #eee;
   }
 }

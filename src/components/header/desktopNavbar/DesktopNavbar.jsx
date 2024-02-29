@@ -1,13 +1,23 @@
 import React from "react";
 import styles from "./desktopNavbar.module.css";
+import { Link } from "react-router-dom";
 
 export default function DesktopNavbar() {
   return (
     <nav className={styles.DesktopNavbar}>
       <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
+        <Link to={"/"}>
+          <li>Home</li>
+        </Link>
+        <Link to={"/about"}>
+          <li>About</li>
+        </Link>
+        <Link>
+          <li>Projects</li>
+        </Link>
+        <Link>
+          <li>Contact</li>
+        </Link>
       </ul>
     </nav>
   );

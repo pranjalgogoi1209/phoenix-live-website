@@ -4,12 +4,16 @@
     display: flex;
     justify-content: center;
     gap: 5vw;
-    li {
-      list-style-type: none;
-      font-size: 1.8vw;
-      cursor: pointer;
-      &:hover {
-        color: #7b01f7;
+    a {
+      text-decoration: none;
+      color: #000;
+      li {
+        list-style-type: none;
+        font-size: 1.8vw;
+        cursor: pointer;
+        &:hover {
+          color: #7b01f7;
+        }
       }
     }
   }
