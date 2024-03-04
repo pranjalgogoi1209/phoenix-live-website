@@ -24,7 +24,6 @@ let services = [
         title: "Musical Tours",
         desc: "",
     },
-
 ]
 
 export default services;
