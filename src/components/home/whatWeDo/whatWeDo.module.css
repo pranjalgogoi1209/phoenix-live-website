@@ -1,39 +1,85 @@
 .WhatWeDo {
-  border: 1px solid black;
-  padding: 2vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  .swiperContainer {
-    /* border: 1px solid black; */
-    width: 50%;
+  position: relative;
+  width: 100%;
+  height: 80vw;
+  /* border: 1px solid red; */
+  margin-top: 5vw;
+  .bgImage {
+    width: 100%;
+    height: 100%;
+    background-image: url("./../../../assets/home/whatWeDo/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    opacity: 0.07;
+  }
+  main {
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
     align-items: center;
-    .swiperParent {
+    gap: 5vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 3vw 4vw;
+
+    .WhatWeDoContainer {
       /* border: 1px solid black; */
-      width: 68%;
-      height: 100%;
-      /* margin-left: 10vw; */
-    }
-    .swiper {
-      height: 31vw;
-      border: 12px solid #eee;
-      border-radius: 2vw;
-      width: 100%;
-      .swiperSlide {
+      display: flex;
+      flex-direction: column;
+      gap: 2vw;
+      h2 {
         /* border: 1px solid black; */
-        padding: 5vw 2vw;
+        margin: 0 auto;
+        text-align: center;
+        margin: 2vw;
+      }
+      .parent {
         display: flex;
-        flex-direction: column;
-        gap: 4vw;
-        p {
-          font-size: 1.7vw;
-        }
-        .content {
+        justify-content: center;
+        align-items: center;
+        gap: 3vw;
+        .singleCard {
+          border-radius: 1.5vw;
+          /* border: 1px solid black; */
+          box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
           display: flex;
           flex-direction: column;
           gap: 1vw;
+          width: 25vw;
+          .imgContainer {
+            border-top-left-radius: 1.5vw;
+            border-top-right-radius: 1.5vw;
+            width: 100%;
+            overflow: hidden;
+            img {
+              border-top-left-radius: 1.5vw;
+              border-top-right-radius: 1.5vw;
+              transition: all ease 0.2s;
+              &:hover {
+                scale: 1.1;
+              }
+            }
+          }
+          .content {
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            gap: 1vw;
+            padding: 1vw;
+            padding-bottom: 2vw;
+            text-align: center;
+            h3 {
+              font-size: 2vw;
+              font-weight: 500;
+              text-align: center;
+            }
+            p {
+              font-size: 1.2vw;
+            }
+          }
         }
       }
     }

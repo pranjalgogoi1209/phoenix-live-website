@@ -1,12 +1,13 @@
 .Hero {
   /* border: 1px solid black; */
   /* height: 75vh; */
-  padding: 0 2vw;
+  padding: 0 3vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   gap: 7vw;
+  margin-top: 10vw;
 
   .titleWrapper {
     display: none;
@@ -31,57 +32,14 @@
 
   .videoContainer {
     /* border: 1px solid black; */
-    width: 100%;
+    width: 95%;
     border-radius: 3vw;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
     source {
       width: 100%;
       height: 100%;
-    }
-  }
-
-  .manualLogo {
-    border: 1px solid black;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 4vw;
-    h2 {
-      margin: 0 auto;
-    }
-    .swiperContainer {
-      /* border: 1px solid black; */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .navigationButton {
-        border: 2px solid #eee;
-        font-size: 3vw;
-        padding: 0.8vw 0.1vw;
-        border-radius: 2rem;
-        cursor: pointer;
-
-        &:hover {
-          border-color: #7b01f7;
-        }
-      }
-      .swiper {
-        /* border: 1px solid black; */
-        width: 90%;
-        .swiperSlide {
-          /* border: 1px solid black; */
-          .logoContainer {
-            /* border: 1px solid black; */
-            width: 18vw;
-            /* height: 6vw; */
-            padding: 0.5vw 1vw;
-            cursor: pointer;
-            transition: background ease 0.3s;
-            &:hover {
-              background-color: #eee;
-            }
-          }
-        }
-      }
     }
   }
 }
