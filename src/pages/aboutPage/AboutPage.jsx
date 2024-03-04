@@ -5,7 +5,7 @@ import Services from "../../components/about/Services";
 
 export default function AboutPage() {
   return (
-    <div>
+    <div className={styles.AboutPage}>
       {/* who we are */}
       <WhoWeAre />
 
