@@ -7,6 +7,8 @@ export default function AboutPage() {
     <div className={styles.AboutPage}>
       {/* who we are */}
       <WhoWeAre />
+
+      {/*  */}
     </div>
   );
 }
