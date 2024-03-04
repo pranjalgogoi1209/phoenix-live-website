@@ -8,6 +8,7 @@ export default function AboutPage() {
       {/* who we are */}
       <WhoWeAre />
       <Services/>
+      {/*  */}
     </div>
   );
 
