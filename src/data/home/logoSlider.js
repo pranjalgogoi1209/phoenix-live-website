@@ -9,9 +9,9 @@ import {
   logo08,
   logo09,
   logo10,
-} from "./../../assets/home/hero/index";
+} from "../../assets/home/hero/index";
 
-export const logos = [
+export const logosArr = [
   logo01,
   logo02,
   logo03,

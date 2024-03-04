@@ -1,0 +1,48 @@
+.LogoSlider {
+  /* border: 10px solid blue; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  h2 {
+    margin: 0 auto;
+  }
+  .swiperContainer {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .navigationButton {
+      border: 2px solid #eee;
+      font-size: 3vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 2rem;
+      padding: 1vw 0.2vw;
+      cursor: pointer;
+      transition: all ease 0.2s;
+      &:hover {
+        border-color: #212121;
+      }
+    }
+    .swiper {
+      /* border: 1px solid black; */
+      width: 90%;
+      .swiperSlide {
+        /* border: 1px solid black; */
+        .logoContainer {
+          /* border: 1px solid black; */
+          width: 18vw;
+          /* height: 6vw; */
+          padding: 0.5vw 1vw;
+          cursor: pointer;
+          transition: background ease 0.3s;
+          &:hover {
+            background-color: #eee;
+          }
+        }
+      }
+    }
+  }
+}

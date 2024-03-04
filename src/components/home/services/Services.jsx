@@ -5,7 +5,9 @@ import { services } from "../../../data/home/services";
 export default function Services() {
   return (
     <div className={styles.Services}>
-      <h1>Tech Forward</h1>
+      <h1>
+        TECH <span>FORWARD</span>
+      </h1>
       <p>
         We're committed to innovation, developing immersive products. our blend
         of in-house and sourced tech seamlessly integrates, enhancing audience

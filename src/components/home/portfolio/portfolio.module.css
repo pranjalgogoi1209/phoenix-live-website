@@ -1,5 +1,5 @@
 .Portfolio {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   padding: 2vw;
   display: flex;
   flex-direction: column;
@@ -83,7 +83,7 @@
 
   button {
     border: 0.2vw solid #212121;
-    margin-top: 18vw;
+    margin-top: 20vw;
     margin-left: auto;
     margin-right: auto;
     padding: 0.5vw 4vw;
