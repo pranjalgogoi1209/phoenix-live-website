@@ -1,0 +1,54 @@
+/** @format */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 8rem;
+}
+.headerRow {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  h1 {
+    font-size: 4rem;
+  }
+}
+.mainRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 80%;
+  margin-top: 3rem;
+  justify-content: center;
+}
+.card {
+  width: calc(33% - 2rem);
+  border-radius: 7px;
+  position: relative;
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px,
+    rgba(0, 0, 0, 0.24) 0px 3px 8px inset; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+  }
+  h2 {
+    display: absolute;
+    color: aliceblue;
+    font-size: 1.2rem;
+    font-weight: 600;
+    position: absolute;
+    bottom: 0;
+    line-height: 2rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    border-radius: 8px;
+    background: linear-gradient(to top, black 40%, transparent 100%);
+  }
+}
