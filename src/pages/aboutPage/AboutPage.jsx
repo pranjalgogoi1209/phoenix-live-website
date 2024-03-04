@@ -4,12 +4,13 @@ import WhoWeAre from "../../components/about/whoWeAre/WhoWeAre";
 import Services from "../../components/about/Services";
 
 export default function AboutPage() {
-  return <div>
+  return (
+    <div>
       {/* who we are */}
       <WhoWeAre />
-      <Services/>
-      {/*  */}
+
+      {/* services */}
+      <Services />
     </div>
   );
-
 }
