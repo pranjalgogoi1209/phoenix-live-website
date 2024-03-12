@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useRef } from "react";
 import styles from "./hero.module.css";
 import video from "./../../../assets/home/hero/intro-video.mp4";
@@ -24,78 +26,22 @@ export default function Hero() {
   return (
     <section className={styles.Hero}>
       {/* title */}
+      {/* Just a sassy events agency */}
       <div className={styles.titleWrapper}>
-        {/*  <div className={styles.titleContainer}>
+        <div className={styles.titleContainer}>
           <h1>
-            Just a sassy <br />{" "}
-            <span>
-              events <br /> agency
-            </span>
+            Just a sassy <br /> <span>events agency</span>
           </h1>
-        </div> */}
+        </div>
       </div>
-
       {/* video */}
-      <video autoPlay muted loop className={styles.videoContainer}>
+      <video
+        autoPlay
+        muted
+        loop
+        className={styles.videoContainer}>
         <source src={video} />
       </video>
-
-      {/* manual logo slider */}
-      <div className={styles.manualLogo}>
-        <h2>Who we hang out with</h2>
-
-        <div className={styles.swiperContainer}>
-          <button className={styles.navigationButton} onClick={navigateLeft}>
-            <MdKeyboardArrowLeft />
-          </button>
-          <Swiper
-            ref={swiperRef}
-            loop={true}
-            // minwidth
-            /* breakpoints={{
-            576: {
-              slidesPerView: 3,
-              spaceBetween: 50,
-              coverflowEffect: {
-                rotate: 40,
-              },
-            },
-            768: {
-              slidesPerView: 3,
-              spaceBetween: 50,
-              coverflowEffect: {
-                rotate: 40,
-              },
-            },
-            1024: {
-              slidesPerView: 4,
-              spaceBetween: 90,
-              coverflowEffect: {
-                rotate: 50,
-              },
-            },
-          }} */
-            spaceBetween={0}
-            slidesPerView={5}
-            className={styles.swiper}
-          >
-            {logos &&
-              logos.map(logo => (
-                <SwiperSlide key={logo} className={styles.swiperSlide}>
-                  <div className={styles.logoContainer}>
-                    <img src={logo} alt="logo" />
-                  </div>
-                </SwiperSlide>
-              ))}
-          </Swiper>
-
-          <button className={styles.navigationButton} onClick={navigateRight}>
-            <MdKeyboardArrowRight />
-          </button>
-        </div>
-        {/* horizontal line */}
-        <hr />
-      </div>
     </section>
   );
 }

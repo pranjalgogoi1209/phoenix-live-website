@@ -1,101 +1,128 @@
+/**
+ * portfolio.module.css
+ *
+ * @format
+ */
+
 .Portfolio {
-  border: 1px solid black;
-  padding: 2vw;
+  padding: 20px;
+  width: 100vw;
+
+  h1 {
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+  }
+  h1 span {
+    color: #007bff;
+    margin-left: 2rem;
+  }
+}
+
+.eventContainer {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4rem;
+  width: 100%;
+}
+
+.parentEvent {
+  width: 100%;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  gap: 4vw;
-  h1 {
-    /* border: 1px solid black; */
-    font-size: 4vw;
-    margin: 0 auto;
-    span {
-      color: #aaa;
-    }
-  }
-  .eventContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 24vw;
-    .parentEvent {
-      /* border: 2px solid red; */
-      position: relative;
+  gap: 5rem;
+}
 
-      .top {
-        display: flex;
-        gap: 2vw;
-        margin-left: 10vw;
-        transition: all ease 0.2s;
-        &:hover {
-          transform: scale(1.1);
-        }
-        .content {
-          /* border: 1px solid black; */
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: flex-start;
-          h2 {
-            font-size: 3vw;
-          }
-          p {
-            font-size: 1.5vw;
-          }
-        }
-      }
-      .bottom {
-        display: flex;
-        gap: 2vw;
-        flex-direction: row-reverse;
-        position: absolute;
-        bottom: -19vw;
-        right: 10vw;
-        transition: all ease 0.2s;
-        &:hover {
-          transform: scale(1.1);
-        }
-        .content {
-          /* border: 1px solid black; */
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-end;
-          align-items: flex-end;
-          margin-bottom: 3vw;
-          h2 {
-            font-size: 3vw;
-          }
-          p {
-            font-size: 1.5vw;
-          }
-        }
-      }
-      .imgContainer {
-        width: 40vw;
-        /* height: 20vw; */
-        border: 0.3vw solid #fff;
-        border-radius: 1vw;
-        cursor: pointer;
-        img {
-          border-radius: 1vw;
-        }
-      }
-    }
-  }
+.top,
+.bottom {
+  height: 100vh;
+  width: 100%;
+  border-radius: 8px;
+  padding: 7%;
+  overflow: hidden;
+  display: flex;
+}
 
-  button {
-    border: 0.2vw solid #212121;
-    margin-top: 18vw;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0.5vw 4vw;
-    font-size: 1.7vw;
-    font-weight: bold;
-    border-radius: 0.5vw;
-    background-color: #212121;
-    transition: all ease 0.2s;
-    color: #fff;
-    &:hover {
-      background-color: #eee;
-      color: #212121;
+.top {
+  flex-direction: row;
+  background: url("./../../../assets/home/portfolio/BG-04.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bottom {
+  flex-direction: row-reverse;
+  background: url("./../../../assets/home/portfolio/BG-04.png");
+  background-position: center;
+  background-size: contain;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.imgContainer {
+  overflow: hidden;
+  border-radius: 8px;
+  border-radius: 28px;
+  width: 60%;
+  height: 500px;
+  background: transparent;
+  box-shadow: 1px 1px 21px #8484846f, -25px -95px 21px #ffffff;
+  position: relative;
+}
+
+.navigationButton {
+  background-color: black;
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  display: none;
+}
+.navigationButton:nth-child(1) {
+  right: 0;
+}
+
+.swiperSlide {
+  height: 500px;
+  .swipeImgContainer {
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
     }
   }
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding: 2rem;
+  h2 {
+    margin-bottom: 10px;
+    font-size: 3em;
+    line-height: 4rem;
+  }
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #0056b3;
 }

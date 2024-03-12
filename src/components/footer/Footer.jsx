@@ -10,7 +10,7 @@ import { CiLinkedin } from "react-icons/ci";
 
 export default function Footer() {
   return (
-    <div className={styles.Footer}>
+    <div className={styles.Footer} id="footer">
       <div className={styles.footerOne}>
         <p>
           Let's talk about the next <br />

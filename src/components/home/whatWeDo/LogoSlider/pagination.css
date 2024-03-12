@@ -1,0 +1,31 @@
+/**
+ * Pagination styles
+ *
+ * @format
+ */
+
+.swiper-pagination {
+  position: absolute;
+  left: 6%;
+  bottom: 20%;
+  /* transform: translateX(-50%); */
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-pagination-bullet {
+  width: 1vw;
+  height: 1vw;
+  background-color: #ffe816;
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ee680e;
+  border: 1px solid black;
+  width: 1vw;
+  height: 1vw;
+}

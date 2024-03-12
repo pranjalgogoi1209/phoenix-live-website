@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import styles from "./desktopNavbar.module.css";
 import { Link } from "react-router-dom";
@@ -12,12 +14,10 @@ export default function DesktopNavbar() {
         <Link to={"/about"}>
           <li>About</li>
         </Link>
-        <Link>
-          <li>Projects</li>
-        </Link>
-        <Link>
+
+        <a href={"#footer"}>
           <li>Contact</li>
-        </Link>
+        </a>
       </ul>
     </nav>
   );

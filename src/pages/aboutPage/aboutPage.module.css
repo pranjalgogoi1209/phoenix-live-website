@@ -1,0 +1,232 @@
+/** @format */
+
+:root {
+  --mainColor: black;
+  --bgColor: #feffff;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  background-color: var(--bgColor);
+}
+
+.aboutHero {
+  height: 300px;
+  width: 100%;
+  .heroImage {
+    background: url("./../../../src/assets/about/hero.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .heroHeading {
+      color: rgb(255, 255, 255);
+      font-size: 3rem;
+    }
+  }
+}
+
+.aboutMainContent {
+  padding: 8vw 10vw;
+  display: flex;
+  width: 100vw;
+  background: url("./../../../src/assets/about/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  .imageDiv {
+    min-width: 40%;
+    width: 40%;
+    display: flex;
+    gap: 1rem;
+    .imageOne {
+      width: 450px;
+      height: 450px;
+      border-radius: 10px;
+    }
+  }
+  .meetupInfo {
+    width: 60%;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .mainHeading {
+      font-size: 3.7rem;
+      font-weight: 700;
+      line-height: 4rem;
+    }
+    .paragraph {
+      font-size: 1.3rem;
+      padding-left: 10px;
+    }
+  }
+  .iconContainer {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    .iconItem {
+      border-radius: 8px;
+    }
+  }
+}
+
+.peopleLove {
+  display: flex;
+  width: 100vw;
+  flex-wrap: wrap;
+  padding: 3vw 8vw;
+  gap: 3vw;
+  .peopleLoveHeading {
+    color: var(--mainColor);
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    font-weight: 700;
+    .impactSecondRow {
+      color: black;
+      text-transform: capitalize;
+      font-size: 3rem;
+      font-weight: 700;
+      width: 20vw;
+      margin-bottom: 5px;
+      background: linear-gradient(45deg, #e31c42, #fca53a);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .impactThirdRow {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .horRow {
+      width: 50%;
+      height: 5px;
+      content: "";
+      background: linear-gradient(to right, #e31c42, #fca53a);
+    }
+  }
+  .peopleLoveItem {
+    display: flex;
+    gap: 0.5rem;
+    width: 25vw;
+    padding: 1.8vw;
+    height: 180px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    border: 0.01px solid rgba(128, 128, 128, 0.472);
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.189);
+    .peopleLoveSectionIcon {
+      width: 80px;
+      height: 50px;
+    }
+    .rightPeopleLoveItem {
+      display: flex;
+      flex-direction: column;
+      padding: 0.5rem;
+      gap: 0.3rem;
+      .heading {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+      .description {
+        width: 100%;
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.peopleLoveItem:hover {
+  box-shadow: none;
+}
+
+.peopleLoveItem:hover .peopleLoveSectionIcon {
+  animation: rotateAndVanish 0.5s both;
+}
+
+@keyframes rotateAndVanish {
+  0% {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(180deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.imageMainContainer {
+  width: 100vw;
+  display: flex;
+  height: 250px;
+  margin-top: 3vw;
+
+  .spanContainer {
+    width: 20vw;
+    position: relative;
+    cursor: pointer;
+
+    .heading {
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transform-origin: center center;
+      transform: scale(0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+
+      h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #feffff;
+        min-width: 100px;
+        line-height: 1rem;
+        text-align: center;
+        transition: opacity 0.5s;
+      }
+    }
+
+    &:hover .heading {
+      opacity: 1;
+      transform: scale(1);
+      animation: borderRadius 0.5s forwards;
+      /* background: radial-gradient(circle at center, #000 5%, #00000063 100%); */
+      background-color: rgba(0, 0, 0, 0.712);
+      transition: transform 0.5s, opacity 0.5s;
+    }
+  }
+}
+
+@keyframes borderRadius {
+  from {
+    border-radius: 50%;
+  }
+  50% {
+    border-radius: 50%;
+  }
+  to {
+    border-radius: 0%;
+  }
+}
