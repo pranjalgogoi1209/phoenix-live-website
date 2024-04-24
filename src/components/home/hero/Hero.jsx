@@ -7,14 +7,14 @@ export default function Hero() {
     <section className={styles.Hero}>
       {/* title */}
       <div className={styles.titleWrapper}>
-        {/*  <div className={styles.titleContainer}>
+        <div className={styles.titleContainer}>
           <h1>
             Just a sassy <br />{" "}
             <span>
               events <br /> agency
             </span>
           </h1>
-        </div> */}
+        </div>
       </div>
 
       {/* video */}

@@ -10,7 +10,7 @@
   margin-top: 10vw;
 
   .titleWrapper {
-    display: none;
+    /* display: none; */
     background-image: url("./../../../assets/home/hero/bg-image.svg");
     background-position: center;
     background-size: cover;
