@@ -2,7 +2,9 @@
 
 import styles from "./whatWeDo.module.css";
 // import "swiper/css/pagination";
-import LogoSlider from "./LogoSlider/LogoSlider";
+
+import LogoSlider from "./logoSlider/LogoSlider";
+
 import { whatWeDoArr } from "../../../data/home/WhatWeDo";
 
 export default function WhatWeDo() {
