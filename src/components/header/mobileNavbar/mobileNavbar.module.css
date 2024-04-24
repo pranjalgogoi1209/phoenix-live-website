@@ -1,0 +1,42 @@
+/** @format */
+.none {
+  display: none;
+}
+
+.openlist {
+  position: absolute;
+  background-color: #3a3a3a;
+  z-index: 100;
+  right: 10px;
+  top: 10px;
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  opacity: 0;
+  transform: scale(0.1);
+  transition: opacity 0.3s ease,
+    transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 8px;
+}
+
+.openlist.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.openlist li {
+  display: flex;
+  justify-content: center;
+}
+
+.openlist li a {
+  text-decoration: none;
+  color: #feffff;
+  font-size: 1.5rem;
+}
+
+.openlist li a:hover {
+  color: #ffcc00;
+}

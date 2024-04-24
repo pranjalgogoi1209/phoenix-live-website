@@ -1,17 +1,12 @@
+/** @format */
+
 .Header {
   /* border: 1px solid black; */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2vw 4vw;
-  background-color: #f0f0f0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 99;
-  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
-
+  padding: 2vw;
+  height: 70px;
   .logoContainer {
     width: 10vw;
     display: flex;
@@ -28,6 +23,9 @@
 /* tablet */
 @media all and (max-width: 991px) {
   .Header {
+    .logoContainer {
+      width: 15vw;
+    }
     .navbar {
       .desktopNavbar {
         display: none;

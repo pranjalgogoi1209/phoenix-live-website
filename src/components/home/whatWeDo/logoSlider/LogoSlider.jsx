@@ -1,13 +1,15 @@
-import React, { useRef } from "react";
+/** @format */
+
+import { useRef } from "react";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
-import styles from "./logoSlider.module.css";
+import styles from "./LogoSlider.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import { logosArr } from "../../../../data/home/logoSlider";
-import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-// import "./pagination.css";
+import "swiper/css/pagination";
+import "./pagination.css";
 
 export default function LogoSlider() {
   const swiperRef = useRef(null);
@@ -25,13 +27,15 @@ export default function LogoSlider() {
   };
   return (
     <div className={styles.LogoSlider}>
-      <h2>Who we hang out with</h2>
+      <h2 data-aos="fade-up">Who we hang out with</h2>
 
-      <div className={styles.swiperContainer}>
+      <div data-aos="fade-up" className={styles.swiperContainer}>
         <button className={styles.navigationButton} onClick={navigateLeft}>
           <MdKeyboardArrowLeft />
         </button>
+
         <Swiper
+          data-aos="fade-up"
           ref={swiperRef}
           loop={true}
           modules={[Autoplay, Pagination]}
@@ -41,31 +45,30 @@ export default function LogoSlider() {
           }}
           // pagination={{ clickable: true }}
           // minwidth
-          /* breakpoints={{
-            576: {
-              slidesPerView: 3,
-              spaceBetween: 50,
+          breakpoints={{
+            0: {
+              slidesPerView: 2,
+              spaceBetween: 20,
               coverflowEffect: {
                 rotate: 40,
               },
             },
-            768: {
+            480: {
               slidesPerView: 3,
-              spaceBetween: 50,
+              spaceBetween: 35,
               coverflowEffect: {
                 rotate: 40,
               },
             },
             1024: {
-              slidesPerView: 4,
-              spaceBetween: 90,
+              slidesPerView: 5,
+              spaceBetween: 15,
               coverflowEffect: {
                 rotate: 50,
               },
             },
-          }} */
+          }}
           spaceBetween={0}
-          slidesPerView={5}
           className={styles.swiper}
         >
           {logosArr?.map(logo => (
@@ -78,7 +81,11 @@ export default function LogoSlider() {
           {/* <div className="swiper-pagination"></div> */}
         </Swiper>
 
-        <button className={styles.navigationButton} onClick={navigateRight}>
+        <button
+          data-aos="fade-up"
+          className={styles.navigationButton}
+          onClick={navigateRight}
+        >
           <MdKeyboardArrowRight />
         </button>
       </div>

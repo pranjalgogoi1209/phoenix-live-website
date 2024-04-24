@@ -1,10 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "./preLoader.module.css";
 import animatedLogo from "./../../../assets/preLoader/animatedLogo.mp4";
 import whiteLogo from "./../../../assets/preLoader/whiteLogo.png";
 
 export default function PreLoader() {
   const [isPlay, setIsPlay] = useState(true);
+  const preloaderRef = useRef(null);
+
+
+  useEffect(() => {
+    const preloader = setTimeout(() => {
+      preloaderRef.current.style.display = "none";
+    }, 6000);
+
+    return () => clearTimeout(preloader);
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -25,9 +35,9 @@ export default function PreLoader() {
   }, [isPlay]);
 
   return (
-    <div className={styles.PreLoader}>
+    <div className={styles.PreLoader} ref={preloaderRef}>
       {isPlay ? (
-        <video autoPlay muted loop className={styles.animatedLogoContainer}>
+        <video autoPlay muted loop className={styles.animatedLogoContainer} >
           <source src={animatedLogo} />
         </video>
       ) : (

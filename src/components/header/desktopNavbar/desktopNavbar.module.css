@@ -1,19 +1,21 @@
+/** @format */
+
 .DesktopNavbar {
   /* border: 1px solid black; */
   ul {
     display: flex;
     justify-content: center;
+    padding: 0 2rem;
     gap: 5vw;
     a {
       text-decoration: none;
-      color: #777;
-      font-weight: 500;
+      color: #000;
       li {
         list-style-type: none;
         font-size: 1.8vw;
         cursor: pointer;
         &:hover {
-          color: #212121;
+          color: #7b01f7;
         }
       }
     }

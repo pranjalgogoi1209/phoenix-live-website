@@ -1,24 +1,31 @@
-/* Pagination styles */
+/**
+ * Pagination styles
+ *
+ * @format
+ */
+
 .swiper-pagination {
-  /* margin: 0 auto; */
   position: absolute;
-  left: 40%;
+  left: 6%;
   bottom: 20%;
   /* transform: translateX(-50%); */
   display: flex;
+  justify-content: center;
 }
 
 .swiper-pagination-bullet {
-  width: 1.4vw;
-  height: 1.4vw;
-  background-color: #212121;
+  width: 0.7rem;
+  height: 0.7rem;
+  background-color: #ffffff;
   margin: 0 5px;
   border-radius: 50%;
   cursor: pointer;
+  border: 1.5px solid black;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #000;
-  width: 1.6vw;
-  height: 1.6vw;
+  background-color: #0e77ee;
+  border: 1.5px solid black;
+  width: 0.8rem;
+  height: 0.8rem;
 }

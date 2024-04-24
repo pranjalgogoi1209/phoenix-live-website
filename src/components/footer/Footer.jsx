@@ -1,3 +1,10 @@
+/**
+ * eslint-disable no-unused-vars
+ *
+ * @format
+ */
+
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import styles from "./footer.module.css";
 import logo from "./../../assets/whiteLogo.png";
@@ -10,19 +17,21 @@ import { CiLinkedin } from "react-icons/ci";
 
 export default function Footer() {
   return (
-    <div className={styles.Footer}>
+    <div
+      className={styles.Footer}
+      id="footer">
       <div className={styles.footerOne}>
-        <p>
-          Let's talk about the next <br />
-          wonderful event
-        </p>
+        <p>Let's talk about the next wonderful event</p>
         <button className="btn1">Contact Now</button>
       </div>
 
       <div className={styles.footerTwo}>
         <div className={styles.footerLogoContainer}>
           <div className={styles.footerLogo}>
-            <img src={logo} alt="footerLogo" />
+            <img
+              src={logo}
+              alt="footerLogo"
+            />
           </div>
           <p>
             Just a sassy events agency committed to streamlining your events,

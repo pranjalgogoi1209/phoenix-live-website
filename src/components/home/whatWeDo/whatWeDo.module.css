@@ -1,84 +1,151 @@
 .WhatWeDo {
-  position: relative;
   width: 100%;
-  height: 80vw;
-  /* border: 1px solid red; */
   margin-top: 5vw;
-  .bgImage {
-    width: 100%;
-    height: 100%;
-    background-image: url("./../../../assets/home/whatWeDo/bg.jpg");
+  padding: 3vw 4vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4vw;
+
+  .WhatWeDoContainer {
+    background-image: url("./../../../assets/home/whatWeDo/BG-01.png");
     background-position: center;
     background-size: cover;
-    opacity: 0.07;
-  }
-  main {
+    background-repeat: no-repeat;
     width: 100%;
-    height: 100%;
+    height: 30vw;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 5vw;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    padding: 3vw 4vw;
+    flex-wrap: wrap;
+    gap: 2vw;
 
-    .WhatWeDoContainer {
-      /* border: 1px solid black; */
+    h2 {
+      margin: 0 auto;
+      text-align: center;
+      margin: 2vw;
+    }
+    .parent {
       display: flex;
-      flex-direction: column;
-      gap: 2vw;
-      h2 {
-        /* border: 1px solid black; */
-        margin: 0 auto;
-        text-align: center;
-        margin: 2vw;
-      }
-      .parent {
+      justify-content: center;
+      align-items: center;
+      gap: 3vw;
+      flex-wrap: wrap;
+      .singleCard {
+        border-radius: 1.5vw;
+        box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
         display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 3vw;
-        .singleCard {
-          border-radius: 1.5vw;
-          /* border: 1px solid black; */
-          box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
+        flex-direction: column;
+        gap: 1vw;
+        width: 25vw;
+        background: #fff;
+        cursor: pointer;
+        transition: all ease 0.5s;
+        /*  .imgContainer {
+          border-top-left-radius: 1.5vw;
+          border-top-right-radius: 1.5vw;
+          width: 100%;
+          overflow: hidden;
+          padding: 1vw;
+          height: 270px;
+          img {
+            border-top-left-radius: 1.5vw;
+            border-top-right-radius: 1.5vw;
+            transition: all ease 0.2s;
+          }
+          img:hover {
+            transform: scale(1.1);
+          }
+        } */
+        .content {
           display: flex;
           flex-direction: column;
           gap: 1vw;
-          width: 25vw;
-          .imgContainer {
-            border-top-left-radius: 1.5vw;
-            border-top-right-radius: 1.5vw;
-            width: 100%;
-            overflow: hidden;
-            img {
-              border-top-left-radius: 1.5vw;
-              border-top-right-radius: 1.5vw;
-              transition: all ease 0.2s;
-              &:hover {
-                scale: 1.1;
-              }
+          padding: 1vw;
+          padding-bottom: 2vw;
+          text-align: center;
+          p {
+            font-size: 1.2vw;
+          }
+        }
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+/* tablet responsive */
+@media all and (max-width: 991px) {
+  .WhatWeDo {
+    margin-top: 8vw;
+    padding: 5vw 6vw;
+    gap: 6vw;
+    .WhatWeDoContainer {
+      /* border: 1px solid red; */
+      width: 100%;
+      height: 90vw;
+      gap: 3vw;
+
+      h2 {
+        margin: 3vw;
+      }
+      .parent {
+        gap: 5vw;
+        flex-wrap: wrap;
+        .singleCard {
+          border-radius: 2.5vw;
+          gap: 1.5vw;
+          width: 50vw;
+          padding: 1.5vw;
+          .content {
+            gap: 1.5vw;
+            padding: 1.5vw;
+            p {
+              font-size: 2vw;
             }
           }
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* mobile responsive */
+@media all and (max-width: 480px) {
+  .WhatWeDo {
+    margin-top: 10vw;
+    padding: 6vw 8vw;
+    gap: 8vw;
+    .WhatWeDoContainer {
+      /* border: 1px solid red; */
+      width: 100%;
+      height: 115vw;
+      gap: 4vw;
+
+      h2 {
+        margin: 4vw;
+      }
+      .parent {
+        gap: 6vw;
+        flex-wrap: wrap;
+        .singleCard {
+          border-radius: 3vw;
+          gap: 2vw;
+          width: 60vw;
+          padding: 2vw;
           .content {
-            /* border: 1px solid black; */
-            display: flex;
-            flex-direction: column;
-            gap: 1vw;
-            padding: 1vw;
-            padding-bottom: 2vw;
-            text-align: center;
-            h3 {
-              font-size: 2vw;
-              font-weight: 500;
-              text-align: center;
-            }
+            gap: 2vw;
+            padding: 2vw;
             p {
-              font-size: 1.2vw;
+              font-size: 2.4vw;
             }
+          }
+          &:hover {
+            transform: scale(1.1);
           }
         }
       }

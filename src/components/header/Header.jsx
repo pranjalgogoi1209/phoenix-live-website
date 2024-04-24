@@ -3,15 +3,14 @@ import styles from "./header.module.css";
 import logo from "./../../assets/header/logo.png";
 import DesktopNavbar from "./desktopNavbar/DesktopNavbar";
 import MobileNavbar from "./mobileNavbar/MobileNavbar";
-import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
     <div className={styles.Header}>
       {/* logo */}
-      <Link to={"/"} className={styles.logoContainer}>
+      <div className={styles.logoContainer}>
         <img src={logo} alt="logo" />
-      </Link>
+      </div>
 
       {/* navbar */}
       <div className={styles.navbar}>

@@ -1,3 +1,66 @@
+/**
+ * projectsPage.module.css
+ *
+ * @format
+ */
+
 .ProjectsPage {
-  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+.projectContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.imageContainer {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  filter: brightness(0.7);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.imageContainer:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.imageContainer:hover .image {
+  filter: brightness(1.2);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .projectContainer {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ProjectsPage h2 {
+    font-size: 2.5rem;
+  }
+  .imageContainer {
+    height: 300px;
+  }
 }

@@ -1,3 +1,5 @@
+/** @format */
+
 .noScroll {
   overflow: hidden;
 }
@@ -48,8 +50,8 @@
     left: 35%;
   }
   100% {
-    top: 2.1vw;
-    left: 4.1vw;
+    top: 1vw;
+    left: 2vw;
     width: 10vw;
   }
 }
@@ -61,5 +63,32 @@
   100% {
     opacity: 0;
     display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  @keyframes logo {
+    0% {
+      top: 40%;
+      left: 35%;
+    }
+    100% {
+      top: 3vw;
+      left: 3vw;
+      width: 13vw;
+    }
+  }
+}
+@media screen and (max-width: 630px) {
+  @keyframes logo {
+    0% {
+      top: 40%;
+      left: 35%;
+    }
+    100% {
+      top: 5vw;
+      left: 3vw;
+      width: 15vw;
+    }
   }
 }
