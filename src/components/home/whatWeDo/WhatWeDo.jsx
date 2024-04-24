@@ -4,7 +4,7 @@ import styles from "./whatWeDo.module.css";
 
 import LogoSlider from "./logoSlider/LogoSlider";
 
-import whatWeDoArr from "./../../../data/home/whatWeDo";
+import { whatWeDoArr } from "./../../../data/home/whatWeDo";
 
 export default function WhatWeDo() {
   return (
