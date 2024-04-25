@@ -9,7 +9,6 @@ import { Autoplay } from "swiper/modules";
 import { Pagination } from "swiper/modules";
 import "swiper/css/pagination";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
-import "../whatWeDo/LogoSlider/pagination.css";
 import { useNavigate } from "react-router-dom";
 
 export default function Portfolio() {
