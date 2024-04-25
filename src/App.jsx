@@ -21,8 +21,8 @@ export default function App() {
   }, []);
   return (
     <>
-      <PreLoader />
       <BrowserRouter>
+        <PreLoader />
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
