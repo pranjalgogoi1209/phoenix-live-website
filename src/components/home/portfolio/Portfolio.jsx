@@ -50,7 +50,7 @@ export default function Portfolio() {
           >
             <div
               className={styles.imgContainer}
-              onClick={() => handleProjectClick(item)}
+              // onClick={() => handleProjectClick(item)}
             >
               {/*  <button
                 className={styles.navigationButton}
