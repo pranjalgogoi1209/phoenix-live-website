@@ -14,7 +14,7 @@ export default function DesktopNavbar() {
         <Link to={"/about"}>
           <li>About</li>
         </Link>
-        <a href={"#footer"}>
+        <a href={"/contact"}>
           <li>Contact</li>
         </a>
       </ul>

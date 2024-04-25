@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 2vw;
-  height: 70px;
+  height: 7vw;
   .logoContainer {
     width: 10vw;
     display: flex;
@@ -20,9 +20,11 @@
   }
 }
 
-/* tablet */
+/* tablet responsiveness */
 @media all and (max-width: 991px) {
   .Header {
+    padding: 3vw;
+    height: 12vw;
     .logoContainer {
       width: 15vw;
     }
@@ -31,7 +33,26 @@
         display: none;
       }
       .mobileNavbar {
-        display: block;
+        display: flex;
+      }
+    }
+  }
+}
+
+/* mobile responsiveness */
+@media all and (max-width: 480px) {
+  .Header {
+    padding: 4vw;
+    height: 14vw;
+    .logoContainer {
+      width: 20vw;
+    }
+    .navbar {
+      .desktopNavbar {
+        display: none;
+      }
+      .mobileNavbar {
+        display: flex;
       }
     }
   }

@@ -3,6 +3,10 @@
   display: none;
 }
 
+.icon-container {
+  font-size: 2vw;
+}
+
 .openlist {
   position: absolute;
   background-color: #3a3a3a;

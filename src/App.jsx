@@ -8,6 +8,8 @@ import Footer from "./components/footer/Footer";
 import AboutPage from "./pages/aboutPage/AboutPage";
 import ProjectsPage from "./pages/projectsPage/ProjectsPage";
 import PreLoader from "./components/home/preLoader/PreLoader";
+import ContactPage from "./pages/contactPage/ContactPage";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -25,6 +27,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>

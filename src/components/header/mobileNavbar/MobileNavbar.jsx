@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export default function MobileNavbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleNavbar = (e) => {
+  const toggleNavbar = e => {
     e.stopPropagation();
     setIsOpen(!isOpen);
   };
@@ -24,15 +24,13 @@ export default function MobileNavbar() {
     };
   }, []);
 
-  const handleNavbarClick = (e) => {
+  const handleNavbarClick = e => {
     e.stopPropagation();
   };
 
   return (
     <div>
-      <div
-        className={styles["icon-container"]}
-        onClick={toggleNavbar}>
+      <div className={styles["icon-container"]} onClick={toggleNavbar}>
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg"
           alt="Menu"
@@ -43,28 +41,23 @@ export default function MobileNavbar() {
         className={`${styles["openlist"]} ${
           isOpen ? styles["show"] : styles["none"]
         }`}
-        onClick={handleNavbarClick}>
+        onClick={handleNavbarClick}
+      >
         <li>
-          <Link
-            to={"/"}
-            onClick={closeNavbar}>
+          <Link to={"/"} onClick={closeNavbar}>
             <li>Home</li>
           </Link>
         </li>
         <li>
-          <Link
-            to={"/about"}
-            onClick={closeNavbar}>
+          <Link to={"/about"} onClick={closeNavbar}>
             <li>About</li>
           </Link>
         </li>
 
         <li>
-          <a
-            href="#footer"
-            onClick={closeNavbar}>
+          <Link to="/contact" onClick={closeNavbar}>
             Contact
-          </a>
+          </Link>
         </li>
       </ul>
     </div>
