@@ -6,6 +6,12 @@ import card2 from "../../assets/about/cards/Cards-02.png";
 import card3 from "../../assets/about/cards/Cards-03.png";
 import card4 from "../../assets/about/cards/Cards-04.png";
 import card5 from "../../assets/about/cards/Cards-05.png";
+import lastImg01 from "./../../assets/about/lastImg01.png";
+import lastImg02 from "./../../assets/about/lastImg02.png";
+import lastImg03 from "./../../assets/about/lastImg03.png";
+import lastImg04 from "./../../assets/about/lastImg04.png";
+import lastImg05 from "./../../assets/about/lastImg05.png";
+
 import imageOne from "../../assets/about/bgf.png";
 
 const PeopleCard = ({ item }) => {
@@ -29,6 +35,29 @@ const PeopleCard = ({ item }) => {
 };
 
 export default function AboutPage() {
+  const lastSectionData = [
+    {
+      img: lastImg01,
+      title: "Corporate Events",
+    },
+    {
+      img: lastImg02,
+      title: "Experiential Events",
+    },
+    {
+      img: lastImg03,
+      title: "Curate & Manage IP's",
+    },
+    {
+      img: lastImg04,
+      title: "Virtual/Hybird Events",
+    },
+    {
+      img: lastImg05,
+      title: "Musical Tours",
+    },
+  ];
+
   return (
     <div className={styles.AboutPage}>
       <div className={styles.heroImage} data-aos="zoom-out-up">
@@ -71,49 +100,15 @@ export default function AboutPage() {
       </div>
 
       {/* last section */}
-      <div className={styles.imageContainer}>
-        <div className={styles.imageMainContainer}>
-          <div className={styles.spanContainer} data-aos="fade-right">
-            <span className={styles.imageSpan}>
-              <img loading="lazy" src={card1} />
-            </span>
-            <span className={styles.heading}>
-              <h1>Corporate Events</h1>
-            </span>
+      <div data-aos="fade-up" className={styles.imageMainContainer}>
+        {lastSectionData?.map((item, index) => (
+          <div key={index} className={styles.singleContainer}>
+            <div className={styles.imgContainer}>
+              <img loading="lazy" src={item.img} />
+            </div>
+            <p className={styles.title}>{item.title}</p>
           </div>
-          <div className={styles.spanContainer} data-aos="fade-right">
-            <span className={styles.imageSpan}>
-              <img loading="lazy" src={card4} />
-            </span>
-            <span className={styles.heading}>
-              <h1>Experiential Events</h1>
-            </span>
-          </div>
-          <div className={styles.spanContainer} data-aos="fade-right">
-            <span className={styles.imageSpan}>
-              <img loading="lazy" src={card5} />
-            </span>
-            <span className={styles.heading}>
-              <h1>Curate & Manage IP's</h1>
-            </span>
-          </div>
-          <div className={styles.spanContainer} data-aos="fade-right">
-            <span className={styles.imageSpan}>
-              <img loading="lazy" src={card3} />
-            </span>
-            <span className={styles.heading}>
-              <h1>Virtual/Hybird Events</h1>
-            </span>
-          </div>
-          <div className={styles.spanContainer} data-aos="fade-right">
-            <span className={styles.imageSpan}>
-              <img loading="lazy" src={card2} />
-            </span>
-            <span className={styles.heading}>
-              <h1>Musical Tours</h1>
-            </span>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

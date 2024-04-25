@@ -1,7 +1,7 @@
 /** @format */
 
 import { useRef } from "react";
-import styles from "./logoSlider.module.css"
+import styles from "./logoSlider.module.css";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -27,16 +27,15 @@ export default function LogoSlider() {
     }
   };
   return (
-    <div className={styles.LogoSlider}>
-      <h2 data-aos="fade-up">Who we hang out with</h2>
+    <div data-aos="fade-up" className={styles.LogoSlider}>
+      <h2>Who we hang out with</h2>
 
-      <div data-aos="fade-up" className={styles.swiperContainer}>
+      <div className={styles.swiperContainer}>
         <button className={styles.navigationButton} onClick={navigateLeft}>
           <MdKeyboardArrowLeft />
         </button>
 
         <Swiper
-          data-aos="fade-up"
           ref={swiperRef}
           loop={true}
           modules={[Autoplay, Pagination]}

@@ -96,13 +96,13 @@
         .singleCard {
           border-radius: 2.5vw;
           gap: 1.5vw;
-          width: 50vw;
+          width: 60vw;
           padding: 1.5vw;
           .content {
             gap: 1.5vw;
             padding: 1.5vw;
             p {
-              font-size: 2vw;
+              font-size: 2.4vw;
             }
           }
           &:hover {
@@ -135,13 +135,13 @@
         .singleCard {
           border-radius: 3vw;
           gap: 2vw;
-          width: 60vw;
+          width: 70vw;
           padding: 2vw;
           .content {
             gap: 2vw;
             padding: 2vw;
             p {
-              font-size: 2.4vw;
+              font-size: 2.8vw;
             }
           }
           &:hover {

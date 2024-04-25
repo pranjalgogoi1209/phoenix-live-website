@@ -12,7 +12,7 @@
     background: url("./../../../src/assets/about/hero.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 300px;
+    height: 25vw;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -103,6 +103,7 @@
       width: 28vw;
       height: 15vw;
       padding: 1.8vw;
+      border-radius: 2vw;
       justify-content: center;
       align-items: center;
       box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
@@ -128,6 +129,65 @@
       }
     }
   }
+
+  .imageMainContainer {
+    margin-top: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3.5vw;
+    .singleContainer {
+      border: 0.2vw solid #bbb;
+      width: 15vw;
+      height: 15vw;
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1vw;
+      transition: all ease 0.5s;
+      &:hover {
+        box-shadow: 0vw 0vw 1vw rgba(0, 0, 0, 0.5);
+      }
+      &:hover .title {
+        opacity: 1;
+        color: #fff;
+        animation: borderRadius 0.5s forwards;
+        background-color: rgba(0, 0, 0, 0.712);
+        border: 0.2vw solid transparent;
+      }
+      .imgContainer {
+        /* border: 1px solid black; */
+        width: 10vw;
+        height: 10vw;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .title {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        z-index: 1;
+        transform-origin: center center;
+        transform: scale(0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border-radius: 50%; */
+        font-size: 1.5vw;
+        text-align: center;
+        font-weight: 600;
+        padding: 2vw;
+      }
+    }
+  }
 }
 
 /* .aboutMainContent .iconContainer {
@@ -139,55 +199,6 @@
 .aboutMainContent .iconContainer .iconItem {
   border-radius: 8px;
 } */
-
-.peopleLove .peopleLoveItem .imageMainContainer {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  margin-top: 3vw;
-  flex-wrap: wrap;
-}
-
-.imageMainContainer .spanContainer {
-  width: 20vw;
-  position: relative;
-  cursor: pointer;
-  min-width: 270px;
-  max-width: 400px;
-}
-
-.imageMainContainer .spanContainer .heading {
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transform-origin: center center;
-  transform: scale(0);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-}
-
-.imageMainContainer .spanContainer .heading h1 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #feffff;
-  min-width: 100px;
-  line-height: 1rem;
-  text-align: center;
-  transition: opacity 0.5s;
-}
-
-.imageMainContainer .spanContainer:hover .heading {
-  opacity: 1;
-  /* transform: scale(1); */
-  animation: borderRadius 0.5s forwards;
-  background-color: rgba(0, 0, 0, 0.712);
-}
 
 @keyframes rotateAndVanish {
   from {
@@ -213,124 +224,150 @@
     border-radius: 50%;
   }
   to {
-    border-radius: 0%;
+    border-radius: 0.9vw;
     transform: scale(1);
   }
 }
 
-@media screen and (max-width: 1050px) {
-  .imageMainContainer .spanContainer {
-    width: 45%;
-  }
-}
-
-@media screen and (max-width: 630px) {
-  .imageMainContainer {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .imageMainContainer .spanContainer {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 1150px) {
-  .aboutMainContent {
-    flex-direction: column-reverse;
-    padding: 0;
-    width: 100%;
-    padding-top: 3rem;
-    background: none;
-    gap: 2rem;
-  }
-
-  .aboutMainContent .meetupInfo {
-    width: 90%;
-  }
-
-  .aboutMainContent .imageDiv {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .aboutMainContent .imageDiv .imageOne {
-    height: 350px;
-  }
-
-  .peopleLove {
-    margin-top: 5rem;
-    justify-content: center;
-  }
-
-  .peopleLove .peopleLoveItem,
-  .peopleLove .peopleLoveHeading {
-    width: 45%;
-  }
-
-  .peopleLove .peopleLoveHeading p {
-    width: 100%;
-  }
-
-  .peopleLove .peopleLoveHeading .impactSecondRow {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .aboutHero {
-    width: 100% !important;
-    height: 150px;
-  }
-  .aboutMainContent {
-    flex-direction: column-reverse;
-    padding: 0;
-    width: 100%;
-    padding-top: 3rem;
-    background: none;
-    gap: 2rem;
-    .meetupInfo {
-      width: 100%;
-      padding: 1rem;
-      background-color: #feffffd1;
-      .mainHeading {
-        font-size: 2rem;
-      }
-      p {
-        background-color: #feffffd1;
+/* tablet responsiveness */
+@media all and (max-width: 991px) {
+  .AboutPage {
+    .heroImage {
+      height: 40vw;
+    }
+    .aboutMainContent {
+      padding: 6vw;
+      background: none;
+      .meetupInfo {
+        gap: 2.5vw;
+        .paragraph {
+          font-size: 2.5vw;
+        }
       }
     }
-    .imageDiv {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      .imageOne {
-        height: 300px;
+    .peopleLove {
+      margin-top: 5vw;
+      gap: 5vw;
+      flex-direction: column;
+      .peopleLoveHeading {
+        font-size: 4.5vw;
+        width: 60vw;
+        height: 34vw;
+        .impactThirdRow {
+          gap: 3vw;
+        }
+      }
+      .peopleLoveItem {
+        gap: 4vw;
+        width: 60vw;
+        height: 34vw;
+        padding: 2vw;
+        border-radius: 3.5vw;
+        .peopleLoveSectionIcon {
+          width: 12vw;
+          height: 11vw;
+        }
+        .heading {
+          width: 40%;
+          font-size: 3vw;
+          text-align: center;
+        }
+      }
+    }
+
+    .imageMainContainer {
+      margin-top: 12vw;
+      gap: 5vw;
+      .singleContainer {
+        border: 0.3vw solid #bbb;
+        width: 40vw;
+        height: 40vw;
+        &:hover {
+          box-shadow: 0vw 0vw 1.5vw rgba(0, 0, 0, 0.5);
+        }
+        &:hover .title {
+          border: 0.3vw solid transparent;
+        }
+        .imgContainer {
+          width: 15vw;
+          height: 15vw;
+        }
+        .title {
+          font-size: 4.5vw;
+          padding: 3.5vw;
+        }
       }
     }
   }
-  .peopleLove {
-    flex-direction: column;
-    margin-top: 4rem;
-    align-items: center;
-    .peopleLoveHeading {
-      width: 100vw;
-      max-width: 400px;
+}
 
-      p {
-        width: 90vw;
-      }
-      .impactSecondRow {
-        width: 100%;
+/* mobile responsiveness */
+@media all and (max-width: 480px) {
+  .AboutPage {
+    .heroImage {
+      height: 50vw;
+    }
+    .aboutMainContent {
+      padding: 8vw;
+      background: none;
+      .meetupInfo {
+        gap: 3vw;
+        .paragraph {
+          font-size: 3vw;
+        }
       }
     }
-    .peopleLoveItem {
-      width: 100%;
-      margin-bottom: 20px;
-      .peopleLoveSectionIcon {
-        padding: 0 10px;
-        width: 100px;
+    .peopleLove {
+      margin-top: 6vw;
+      gap: 6vw;
+      flex-direction: column;
+      .peopleLoveHeading {
+        font-size: 5vw;
+        width: 66vw;
+        height: 40vw;
+        .impactThirdRow {
+          gap: 4vw;
+        }
+      }
+      .peopleLoveItem {
+        gap: 6vw;
+        width: 66vw;
+        height: 40vw;
+        padding: 3.6vw;
+        border-radius: 4vw;
+        .peopleLoveSectionIcon {
+          width: 15vw;
+          height: 14vw;
+        }
+        .heading {
+          width: 50%;
+          font-size: 3.6vw;
+          text-align: center;
+        }
+      }
+    }
+
+    .imageMainContainer {
+      margin-top: 18vw;
+      gap: 7vw;
+      .singleContainer {
+        border: 0.4vw solid #bbb;
+        width: 40vw;
+        height: 40vw;
+        &:hover {
+          box-shadow: 0vw 0vw 2vw rgba(0, 0, 0, 0.5);
+        }
+        &:hover .title {
+          border: 0.4vw solid transparent;
+        }
+        .imgContainer {
+          width: 20vw;
+          height: 20vw;
+        }
+        .title {
+          font-size: 4vw;
+          padding: 3vw;
+        }
       }
     }
   }
