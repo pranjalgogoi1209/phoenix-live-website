@@ -21,7 +21,7 @@ export default function App() {
   }, []);
   return (
     <>
-      {/* <PreLoader /> */}
+      <PreLoader />
       <BrowserRouter>
         <Header />
         <Routes>

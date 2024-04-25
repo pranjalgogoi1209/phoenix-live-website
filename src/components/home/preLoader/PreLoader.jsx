@@ -6,23 +6,7 @@ import whiteLogo from "./../../../assets/preLoader/whiteLogo.png";
 export default function PreLoader() {
   const [isPlay, setIsPlay] = useState(true);
   const preloaderRef = useRef(null);
-
-
-  useEffect(() => {
-    const preloader = setTimeout(() => {
-      preloaderRef.current.style.display = "none";
-    }, 6000);
-
-    return () => clearTimeout(preloader);
-  }, []);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsPlay(false);
-    }, 4400);
-
-    return () => clearTimeout(timer);
-  }, []);
+  const [videoLoaded, setVideoLoaded] = useState(false);
 
   useEffect(() => {
     if (isPlay) {
@@ -34,10 +18,41 @@ export default function PreLoader() {
     }
   }, [isPlay]);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsPlay(false);
+    }, 4400);
+
+    return () => clearTimeout(timer);
+  }, [videoLoaded]);
+
+  useEffect(() => {
+    const preloader = setTimeout(() => {
+      if (!isPlay) {
+        preloaderRef.current.style.display = "none";
+      }
+    }, 1000);
+
+    return () => clearTimeout(preloader);
+  }, [isPlay]);
+
+  const handleVideoLoaded = () => {
+    setVideoLoaded(true);
+  };
+  console.log(videoLoaded);
   return (
-    <div className={styles.PreLoader} ref={preloaderRef}>
+    <div
+      className={`${styles.PreLoader} ${isPlay ? styles.removePreLoader : ""}`}
+      ref={preloaderRef}
+    >
       {isPlay ? (
-        <video autoPlay muted loop className={styles.animatedLogoContainer} >
+        <video
+          autoPlay
+          muted
+          loop
+          onLoadedMetadata={handleVideoLoaded}
+          className={styles.animatedLogoContainer}
+        >
           <source src={animatedLogo} />
         </video>
       ) : (

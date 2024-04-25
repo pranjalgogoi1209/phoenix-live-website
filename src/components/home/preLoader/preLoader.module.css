@@ -4,6 +4,13 @@
   overflow: hidden;
 }
 
+/* .removePreLoader {
+  animation-name: preLoader;
+  animation-duration: 1s;
+  animation-delay: 5.5s;
+  animation-fill-mode: forwards;
+} */
+
 .PreLoader {
   position: fixed;
   top: 0;
@@ -17,10 +24,7 @@
   justify-content: center;
   align-items: center;
   background-color: #000;
-  animation-name: preLoader;
-  animation-duration: 1s;
-  animation-delay: 5.5s;
-  animation-fill-mode: forwards;
+
   .animatedLogoContainer {
     width: 100vw;
     z-index: 1;
@@ -50,8 +54,8 @@
     left: 35%;
   }
   100% {
-    top: 1vw;
-    left: 2vw;
+    top: 1.9vw;
+    left: 1.9vw;
     width: 10vw;
   }
 }
@@ -75,20 +79,20 @@
     100% {
       top: 3vw;
       left: 3vw;
-      width: 13vw;
+      width: 15vw;
     }
   }
 }
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 480px) {
   @keyframes logo {
     0% {
       top: 40%;
       left: 35%;
     }
     100% {
-      top: 5vw;
-      left: 3vw;
-      width: 15vw;
+      top: 4vw;
+      left: 4vw;
+      width: 19vw;
     }
   }
 }

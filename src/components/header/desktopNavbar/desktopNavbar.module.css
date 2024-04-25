@@ -14,8 +14,10 @@
         list-style-type: none;
         font-size: 1.8vw;
         cursor: pointer;
+        color: #666;
+        font-weight: 600;
         &:hover {
-          color: #7b01f7;
+          color: #000;
         }
       }
     }
