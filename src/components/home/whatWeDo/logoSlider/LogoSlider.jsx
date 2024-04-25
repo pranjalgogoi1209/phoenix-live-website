@@ -1,8 +1,9 @@
 /** @format */
 
 import { useRef } from "react";
+import styles from "./logoSlider.module.css"
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
-import styles from "./LogoSlider.module.css";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
