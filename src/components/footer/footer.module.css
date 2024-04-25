@@ -58,6 +58,10 @@
       flex-direction: column;
       gap: 1vw;
       padding: 2vw;
+      a {
+        color: #ccc;
+        text-decoration: none;
+      }
     }
     .footerContact {
       /* border: 1px solid white; */

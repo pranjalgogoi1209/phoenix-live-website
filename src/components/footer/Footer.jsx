@@ -6,6 +6,7 @@
 
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./footer.module.css";
 import logo from "./../../assets/whiteLogo.png";
 import { PiMapPinLineLight } from "react-icons/pi";
@@ -14,25 +15,31 @@ import { CiMail } from "react-icons/ci";
 import { CiFacebook } from "react-icons/ci";
 import { SlSocialTwitter } from "react-icons/sl";
 import { CiLinkedin } from "react-icons/ci";
+import Tooltip from "@mui/material/Tooltip";
 
 export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
-    <div
-      className={styles.Footer}
-      id="footer">
+    <div className={styles.Footer} id="footer">
       <div className={styles.footerOne}>
         <p>Let's talk about the next wonderful event</p>
-        <button className="btn1">Contact Now</button>
+        <Link to="/contact" onClick={scrollToTop}>
+          <button className="btn1">Contact Now</button>
+        </Link>
       </div>
 
       <div className={styles.footerTwo}>
         <div className={styles.footerLogoContainer}>
-          <div className={styles.footerLogo}>
-            <img
-              src={logo}
-              alt="footerLogo"
-            />
-          </div>
+          <Link to={"/"} onClick={scrollToTop}>
+            <div className={styles.footerLogo}>
+              <img src={logo} alt="footerLogo" />
+            </div>
+          </Link>
           <p>
             Just a sassy events agency committed to streamlining your events,
             infusing vibrancy, and delivering concise experiences.
@@ -40,10 +47,15 @@ export default function Footer() {
         </div>
         <div className={styles.explore}>
           <strong>EXPLORE</strong>
-          <p>Home</p>
-          <p>About</p>
-          <p>Projects</p>
-          <p>Contact</p>
+          <Link to={"/"} onClick={scrollToTop}>
+            <p>Home</p>
+          </Link>
+          <Link to={"/about"} onClick={scrollToTop}>
+            <p>About</p>
+          </Link>
+          <Link to={"/contact"} onClick={scrollToTop}>
+            <p>Contact</p>
+          </Link>
         </div>
         <div className={styles.footerContact}>
           <strong>CONTACT</strong>

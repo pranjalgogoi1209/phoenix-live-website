@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./header.module.css";
 import logo from "./../../assets/header/logo.png";
 import DesktopNavbar from "./desktopNavbar/DesktopNavbar";
@@ -8,9 +9,11 @@ export default function Header() {
   return (
     <div className={styles.Header}>
       {/* logo */}
-      <div className={styles.logoContainer}>
-        <img src={logo} alt="logo" />
-      </div>
+      <Link to={"/"}>
+        <div className={styles.logoContainer}>
+          <img src={logo} alt="logo" />
+        </div>
+      </Link>
 
       {/* navbar */}
       <div className={styles.navbar}>
