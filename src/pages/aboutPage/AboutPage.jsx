@@ -100,7 +100,7 @@ export default function AboutPage() {
       </div>
 
       {/* last section */}
-      <div data-aos="fade-up" className={styles.imageMainContainer}>
+      {/* <div data-aos="fade-up" className={styles.imageMainContainer}>
         {lastSectionData?.map((item, index) => (
           <div key={index} className={styles.singleContainer}>
             <div className={styles.imgContainer}>
@@ -109,7 +109,7 @@ export default function AboutPage() {
             <p className={styles.title}>{item.title}</p>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }
