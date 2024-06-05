@@ -74,7 +74,7 @@
         gap: 0.5vw;
         .socialMedia {
           display: flex;
-          gap: 1.5vw;
+          gap: 1vw;
           svg {
             font-size: 1.5vw;
           }

@@ -14,7 +14,7 @@ import { IoCallOutline } from "react-icons/io5";
 import { CiMail } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { CiLinkedin } from "react-icons/ci";
+import { AiOutlineLinkedin } from "react-icons/ai";
 import Tooltip from "@mui/material/Tooltip";
 
 export default function Footer() {
@@ -85,14 +85,14 @@ export default function Footer() {
               >
                 <FaInstagram />
               </a>
-              <a href="#" target="_blank">
+              {/* <a href="#" target="_blank">
                 <FaXTwitter />
-              </a>
+              </a> */}
               <a
                 href="https://www.linkedin.com/company/phoenixlive/"
                 target="_blank"
               >
-                <CiLinkedin />
+                <AiOutlineLinkedin />
               </a>
             </div>
           </div>
