@@ -2,7 +2,7 @@
   padding: 0 2vw;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   gap: 5vw;
 
@@ -23,7 +23,7 @@
 
   .videoContainer {
     /* border: 1px solid black; */
-    width: 100%;
+    width: 90%;
     border-radius: 3vw;
     source {
       width: 100%;

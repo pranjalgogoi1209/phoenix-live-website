@@ -1,12 +1,13 @@
 /** @format */
-
+import "./portfolio.css";
 import { useRef } from "react";
 import styles from "./portfolio.module.css";
 import { portfolio } from "../../../data/home/portfolio";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
-import { Pagination } from "swiper/modules";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
@@ -27,7 +28,7 @@ export default function Portfolio() {
     }
   };
 
-  const handleProjectClick = item => {
+  const handleProjectClick = (item) => {
     const data = {
       title: item.title,
       images: item.img,
@@ -52,8 +53,9 @@ export default function Portfolio() {
               className={styles.imgContainer}
               // onClick={() => handleProjectClick(item)}
             >
-              {/*  <button
-                className={styles.navigationButton}
+              {/* navigation left */}
+              {/* <button
+                className={`${styles.navigationButton} ${styles.navigateLeft}`}
                 onClick={navigateLeft}
               >
                 <MdKeyboardArrowLeft />
@@ -62,11 +64,12 @@ export default function Portfolio() {
               <Swiper
                 ref={swiperRef}
                 loop={true}
-                modules={[Autoplay, Pagination]}
-                autoplay={{
+                modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+                /* autoplay={{
                   delay: 3000,
                   disableOnInteraction: false,
-                }}
+                }} */
+                navigation
                 pagination={{ clickable: true }}
                 spaceBetween={0}
                 slidesPerView={1}
@@ -74,14 +77,28 @@ export default function Portfolio() {
               >
                 {item.img?.map((ite, ind) => (
                   <SwiperSlide key={ind} className={styles.swiperSlide}>
-                    <div className={styles.swipeImgContainer}>
-                      <img src={ite} alt="event" />
-                    </div>
+                    {ind === 0 && (
+                      <video
+                        // autoPlay
+                        controls
+                        // loop
+                        className={`flex-row-center ${styles.swipeImgContainer}`}
+                      >
+                        <source src={ite} />
+                      </video>
+                    )}
+
+                    {ind !== 0 && (
+                      <div className={styles.swipeImgContainer}>
+                        <img src={ite} alt="event" />
+                      </div>
+                    )}
                   </SwiperSlide>
                 ))}
               </Swiper>
 
-              {/*  <button
+              {/* navigation right */}
+              {/* <button
                 className={styles.navigationButton}
                 onClick={navigateRight}
               >

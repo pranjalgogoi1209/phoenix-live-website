@@ -15,9 +15,10 @@ export default function Hero() {
       <video
         data-aos="fade-left"
         autoPlay
-        muted
-        loop
-        className={styles.videoContainer}
+        controls
+        // loop
+        aria-label="Introductory Video"
+        className={`flex-row-center ${styles.videoContainer}`}
       >
         <source src={video} />
       </video>

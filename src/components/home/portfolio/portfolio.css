@@ -1,0 +1,62 @@
+/* Custom Swiper Navigation Styles */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff !important;
+  width: 30px; /* Adjust the size */
+  height: 30px; /* Adjust the size */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 5vw !important; /* Adjust the icon size */
+}
+
+.swiper-button-next {
+  right: 2vw !important; /* Adjust the position */
+}
+
+.swiper-button-prev {
+  left: 2vw !important; /* Adjust the position */
+}
+
+/* Change the color of pagination bullets */
+.swiper-pagination-bullet {
+  background-color: #fff !important; /* Change bullet color */
+}
+
+/* Change the color of the active pagination bullet */
+.swiper-pagination-bullet-active {
+  background-color: #fff !important; /* Change active bullet color */
+}
+
+/* Additional specificity example */
+.swiper-container .swiper-pagination-bullet {
+  background-color: #fff !important;
+}
+
+.swiper-container .swiper-pagination-bullet-active {
+  background-color: #fff !important;
+}
+
+@media all and (max-width: 991px) {
+  /* Custom Swiper Navigation Styles */
+  .swiper-button-next,
+  .swiper-button-prev {
+    /* color: #ff6347 !important; */
+    width: 30px; /* Adjust the size */
+    height: 30px; /* Adjust the size */
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 10vw !important; /* Adjust the icon size */
+  }
+
+  .swiper-button-next {
+    right: 2vw !important; /* Adjust the position */
+  }
+
+  .swiper-button-prev {
+    left: 2vw !important; /* Adjust the position */
+  }
+}
